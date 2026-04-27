@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Corevia Technologies Design System
+   Brand: Deep Navy + Teal + Silver
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 30% 99%;
+    --foreground: 160 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 25% 10%;
+
+    /* Deep Emerald — primary brand */
+    --primary: 162 65% 16%;
+    --primary-foreground: 40 30% 98%;
+    --primary-glow: 162 55% 28%;
+
+    /* Warm Gold — accent / CTA */
+    --secondary: 38 80% 52%;
+    --secondary-foreground: 162 65% 12%;
+
+    --muted: 80 20% 95%;
+    --muted-foreground: 160 12% 38%;
+
+    /* Soft Olive accent */
+    --accent: 90 35% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 80 15% 88%;
+    --input: 80 15% 88%;
+    --ring: 38 80% 52%;
+
+    --radius: 0.75rem;
+
+    /* Brand surfaces */
+    --emerald-deep: 162 70% 10%;
+    --emerald: 162 65% 16%;
+    --gold: 38 80% 52%;
+    --gold-soft: 42 90% 72%;
+    --cream: 40 50% 97%;
+    --charcoal: 160 18% 22%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(162 70% 9%) 0%, hsl(162 60% 16%) 55%, hsl(160 35% 22%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(38 85% 55%) 0%, hsl(28 80% 50%) 100%);
+    --gradient-overlay: linear-gradient(120deg, hsl(162 70% 9% / 0.92) 0%, hsl(162 60% 16% / 0.78) 55%, hsl(162 50% 22% / 0.35) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 40% 98%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(40 50% 97%) 0%, hsl(80 30% 93%) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 12px 40px -12px hsl(162 65% 16% / 0.28);
+    --shadow-glow: 0 0 60px hsl(38 80% 52% / 0.45);
+    --shadow-card: 0 6px 24px -6px hsl(162 65% 16% / 0.12);
+    --shadow-warm: 0 10px 30px -10px hsl(38 80% 52% / 0.4);
+
+    /* Motion */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 160 12% 28%;
+    --sidebar-primary: 162 65% 16%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 80 20% 94%;
+    --sidebar-accent-foreground: 162 65% 16%;
+    --sidebar-border: 80 15% 88%;
+    --sidebar-ring: 38 80% 52%;
+  }
+
+  .dark {
+    --background: 224 82% 8%;
+    --foreground: 210 40% 98%;
+    --card: 224 60% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 60% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 100% 50%;
+    --primary-foreground: 224 82% 10%;
+    --secondary: 224 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 224 40% 18%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 199 100% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 40% 22%;
+    --input: 224 40% 22%;
+    --ring: 199 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
