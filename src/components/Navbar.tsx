@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoLockup from "@/assets/corevia-lockup.png";
+import coreviaNewLogo from "@/assets/corevia-lockup.png";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -40,13 +40,19 @@ const Navbar = () => {
           ? "bg-background/95 backdrop-blur-md shadow-card border-b border-border"
           : "bg-background/70 backdrop-blur-sm"
       }`}
+      style={{ isolation: "isolate" }}
     >
       <nav className="container flex items-center justify-between h-20">
-        <a href="#home" className="flex items-center" aria-label="Corevia Technologies">
+        {/* ── Logo ── */}
+        <a href="#home" aria-label="Corevia Technologies">
           <img
-            src={logoLockup}
+            src={coreviaNewLogo}
             alt="Corevia Technologies"
-            className="h-12 md:h-14 w-auto object-contain rounded-md"
+            className="h-12 md:h-14 w-auto object-contain"
+            style={{
+              mixBlendMode: "screen",
+              filter: "brightness(1.3) contrast(1.1) saturate(1.1)",
+            }}
           />
         </a>
 

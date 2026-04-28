@@ -36,8 +36,17 @@ const Contact = () => {
                 <User size={18} />
               </div>
               <div>
-                <p className="font-semibold text-primary">Krishna Kumar</p>
-                <p className="text-sm text-muted-foreground">Owner & Principal</p>
+                <p className="font-semibold text-primary">Sai Srinivas Madamoni</p>
+                <p className="text-sm text-muted-foreground">Founder</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-lg bg-gradient-primary text-primary-foreground flex items-center justify-center shrink-0">
+                <User size={18} />
+              </div>
+              <div>
+                <p className="font-semibold text-primary">Gagan Somlok</p>
+                <p className="text-sm text-muted-foreground">Managing Director &amp; Co-Founder</p>
               </div>
             </li>
             <li className="flex items-start gap-4">

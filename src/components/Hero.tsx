@@ -21,9 +21,9 @@ const Hero = () => (
             US IT Staffing & Workforce Solutions
           </span>
 
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-primary leading-[1.08] mb-6">
+          <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.1] mb-6">
             Build Powerful{" "}
-            <span className="bg-gradient-to-r from-gold to-gold-soft bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Digital Solutions
             </span>{" "}
             for Your Business

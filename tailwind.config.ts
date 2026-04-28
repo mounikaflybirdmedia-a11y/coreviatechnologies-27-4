@@ -18,14 +18,15 @@ export default {
         body: ['Poppins', 'sans-serif'],
       },
       colors: {
-        emerald: {
-          DEFAULT: "hsl(var(--emerald))",
-          deep: "hsl(var(--emerald-deep))",
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          deep: "hsl(var(--navy-deep))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          soft: "hsl(var(--gold-soft))",
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+          soft: "hsl(var(--cyan-soft))",
         },
+        "blue-electric": "hsl(var(--blue-electric))",
         cream: "hsl(var(--cream))",
         charcoal: "hsl(var(--charcoal))",
         border: "hsl(var(--border))",
